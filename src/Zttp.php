@@ -12,6 +12,12 @@ class Zttp
 
 class PendingZttpRequest
 {
+    public $beforeSendingCallbacks;
+    public $options;
+    public $cookies;
+    public $transferStats;
+    public $bodyFormat;
+    
     function __construct()
     {
         $this->beforeSendingCallbacks = collect(function ($request, $options) {
