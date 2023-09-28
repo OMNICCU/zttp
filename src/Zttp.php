@@ -239,6 +239,8 @@ class PendingZttpRequest
 
 class ZttpRequest
 {
+    public $request;
+    
     function __construct($request)
     {
         $this->request = $request;
@@ -269,6 +271,10 @@ class ZttpRequest
 
 class ZttpResponse
 {
+    public $response;
+    public $cookies;
+    public $transferStats;
+    
     use \Illuminate\Support\Traits\Macroable {
         __call as macroCall;
     }
